@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="10dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/courtImage"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/RoundedCornersStyle" />
+
+    <TextView
+        android:id="@+id/courtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/courtImage"
+        android:gravity="center"
+        android:layout_marginBottom="-1dp"
+        android:background="@drawable/recycler_rounded"
+        android:padding="4dp"
+        android:text="Badminton Courts"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+</RelativeLayout>

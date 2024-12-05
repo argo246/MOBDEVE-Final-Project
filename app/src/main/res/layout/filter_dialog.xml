@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filterDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date / Time"
+            android:textSize="12dp"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="5dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filterQueueMaster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Queue Master"
+            android:textSize="12dp"
+            android:drawableStart="@drawable/ic_queue_master"
+            android:drawablePadding="5dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filterLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Group Name / Court Name / Location"
+            android:textSize="12dp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="5dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

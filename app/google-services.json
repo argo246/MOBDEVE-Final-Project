@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "801745472429",
+    "project_id": "balmy-vertex-443113-q7",
+    "storage_bucket": "balmy-vertex-443113-q7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801745472429:android:a009672155983782496f24",
+        "android_client_info": {
+          "package_name": "com.mobdeve.s19.group2.mco2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwUkPqWpYpq7OjNU2w-unjXlO0QEg0A8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

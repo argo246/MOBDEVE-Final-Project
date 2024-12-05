@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nav_bar_bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/badmintonCourt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_marginStart="15dp"
+        android:text="Badminton Courts"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/recyclerViewCourt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText"
+        android:textColor="#F0F0F0"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCourt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/recycler_rounded"
+        app:layout_constraintTop_toBottomOf="@id/badmintonCourt"
+        app:layout_constraintBottom_toTopOf="@id/badmintonGroup"/>
+
+    <TextView
+        android:id="@+id/badmintonGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginStart="15dp"
+        android:text="Badminton Groups"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view_groups"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewCourt"
+        tools:ignore="HardcodedText"
+        android:textColor="#F0F0F0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/findLocationCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recycler_rounded"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/badmintonGroup"
+        app:layout_constraintStart_toEndOf="@id/badmintonGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/badmintonGroup"
+        app:layout_constraintHorizontal_bias="0.9000"
+        app:layout_constraintVertical_bias="0.8"
+        android:clipChildren="true"
+        android:clipToPadding="true">
+
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Filter"
+            android:textSize="12sp"
+            android:background="@drawable/recycler_rounded"
+            android:textColor="@android:color/black" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_groups"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/recycler_rounded"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="380dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/badmintonGroup" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="20dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:background="#F0F0F0"
+            android:clipToOutline="true"
+            app:itemIconSize="25dp"
+            app:itemIconTint="@color/black"
+            app:itemTextAppearanceActiveBoldEnabled="false"
+            app:itemTextColor="@color/black"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/navigation_menu"
+            app:shapeAppearanceOverlay="@style/BottomNavShape"
+            tools:ignore="MissingConstraints" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
